@@ -1,0 +1,70 @@
+/*=============== PROJECTS ===============*/
+
+.projects__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.projects__card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.projects__img {
+  width: 100%;
+  height: 100%;
+}
+
+.projects__modal {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  /* Start position - hidden */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,
+      hsla(0, 0%, 0%, 0)0%,
+      hsla(var(--hue), 70%, 40%, .8)120%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: bottom .4s;
+}
+
+.projects__subtitle,
+.projects__button {
+  color: white;
+  font-size: var(--small-font-size);
+}
+
+.project__subtitle {
+  display: block;
+  margin-bottom: .25rem;
+}
+
+.projects__title {
+  color: white;
+  font-size: var(--h2-font-size);
+  margin-bottom: .75rem;
+}
+
+.projects__button {
+  display: flex;
+  align-items: center;
+  column-gap: .5r;
+  font-weight: var(--font-medium);
+}
+
+.projects__button i {
+  font-size: 1.25rem;
+}
+
+.projects__card:hover .projects__modal {
+  bottom: 0;
+}

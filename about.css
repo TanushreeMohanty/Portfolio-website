@@ -1,0 +1,61 @@
+/*=============== ABOUT ===============*/
+.about__container {
+  row-gap: 2.5rem;
+}
+
+.about__data {
+  text-align: center;
+}
+
+.about__description {
+  margin-bottom: 2rem;
+}
+
+.about__image {
+  justify-self: center;
+  animation: scaleIn 1s ease-in-out infinite alternate;
+}
+
+.about__blob {
+  width: 320px;
+  animation: rotate 8s linear infinite;
+}
+
+.about__blob path {
+  stroke: var(--first-color);
+}
+
+/*=============== Keyframe Animations ===============*/
+@keyframes slideInUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
